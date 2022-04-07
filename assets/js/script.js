@@ -1,6 +1,8 @@
 var currentHour = moment().hour();
 var today = moment().format("dddd, MMM Do");
-$("#currentDay").text(today);
+$("#currentDay").text("Today is: " + today);
+var currentTime = moment().format("h:mm A");
+$("#currentHour").text("Currently, it is: " + currentTime);
 
 console.log("Time = " + currentHour);
 
@@ -122,23 +124,67 @@ check5pm();
 // var task5pm = document.querySelector(".task4pm");
 
 
-
-$(".saveBtn1").on("click", function (event) {
+//saves textarea input on save button click
+$(".saveBtn").on("click", function (event) {
     event.preventDefault();
-
     //targets the nearby textbox
     var textEl = ($(this)).parent().prev().children([0]);
-
-    localStorage.setItem("task9am", textEl);
+    //targets the nearby textbox id
+    var textId = ($(this)).parent().prev().children([0]).attr("id");
+    console.log(textEl);
+    console.log(textId);
+    localStorage.setItem(textId, textEl.val());
 });
 
+var task9amLS = localStorage.getItem("task9am");
+var task9am = $("#task9am").val();
+
+$(".task9").text(task9amLS);
 
 
+var task10amLS = localStorage.getItem("task10am");
+var task10am = $("#task10am").val();
+
+$(".task10").text(task10amLS);
 
 
+var task11amLS = localStorage.getItem("task11am");
+var task11am = $("#task11am").val();
+
+$(".task11").text(task11amLS);
 
 
+var task12pmLS = localStorage.getItem("task12pm");
+var task12pm = $("#task12pm").val();
+
+$(".task12").text(task12pmLS);
 
 
+var task1pmLS = localStorage.getItem("task1pm");
+var task1pm = $("#task1pm").val();
 
-// $("#9amBox").text(window.localStorage.getItem("tasks"))
+$(".task1").text(task1pmLS);
+
+
+var task2pmLS = localStorage.getItem("task2pm");
+var task2pm = $("#task2pm").val();
+
+$(".task2").text(task2pmLS);
+
+
+var task3pmLS = localStorage.getItem("task3pm");
+var task3pm = $("#task3pm").val();
+
+$(".task3").text(task3pmLS);
+
+
+var task4pmLS = localStorage.getItem("task4pm");
+var task4pm = $("#task4pm").val();
+
+$(".task4").text(task4pmLS);
+
+
+var task5pmLS = localStorage.getItem("task5pm");
+var task5pm = $("#task5pm").val();
+
+$(".task5").text(task5pmLS);

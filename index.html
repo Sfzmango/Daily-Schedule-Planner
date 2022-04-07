@@ -19,10 +19,24 @@
     <p class="lead">A simple calendar app for scheduling your work day</p>
     <!-- used moment.js to show current day -->
     <p id="currentDay" class="lead"></p>
+    <p id="currentHour" class="lead"></p>
   </header>
   <div class="container">
+
+    <div class="card text-center" style="width: 18rem;">
+      <div class="card-header h2">
+        Legend:
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item past">This is in the past</li>
+        <li class="list-group-item present">This is in the present hour</li>
+        <li class="list-group-item future">This is in the future</li>
+      </ul>
+    </div>
+
+    <br>
     <!-- Timeblocks go here -->
-    <table class="table">
+    <table class="table text-center">
       <thead class="table-dark">
         <tr>
           <th scope="col">Time:</th>
@@ -34,18 +48,16 @@
         <tr id="9amBox">
           <th scope="row">9:00AM</th>
           <td>
-            <textarea class="form-control task9am" id="task9am" rows="3"></textarea>
+            <textarea class="form-control task9" id="task9am" rows="3"></textarea>
           </td>
           <td>
-            <button type="button" class="btn saveBtn1">Save</button>
+            <button type="button" class="btn saveBtn">Save</button>
           </td>
         </tr>
         <tr id="10amBox">
           <th scope="row">10:00AM</th>
-          <td class="task10am">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum, officiis eaque! Minima
-            at
-            obcaecati
-            deserunt. Omnis a corporis, id rerum quis inventore veritatis fuga maxime. Dolorem ut autem nisi veniam!
+          <td>
+            <textarea class="form-control task10" id="task10am" rows="3"></textarea>
           </td>
           <td>
             <button type="button" class="btn saveBtn">Save</button>
@@ -53,7 +65,8 @@
         </tr>
         <tr id="11amBox">
           <th scope="row">11:00AM</th>
-          <td class="task11am">
+          <td>
+            <textarea class="form-control task11" id="task11am" rows="3"></textarea>
           </td>
           <td>
             <button type="button" class="btn saveBtn">Save</button>
@@ -61,42 +74,54 @@
         </tr>
         <tr id="12pmBox">
           <th scope="row">12:00PM</th>
-          <td class="task12pm"></td>
+          <td>
+            <textarea class="form-control task12" id="task12pm" rows="3"></textarea>
+          </td>
           <td>
             <button type="button" class="btn saveBtn">Save</button>
           </td>
         </tr>
         <tr id="1pmBox">
           <th scope="row">1:00PM</th>
-          <td class="task1pm"></td>
+          <td>
+            <textarea class="form-control task1" id="task1pm" rows="3"></textarea>
+          </td>
           <td>
             <button type="button" class="btn saveBtn">Save</button>
           </td>
         </tr>
         <tr id="2pmBox">
           <th scope="row">2:00PM</th>
-          <td class="task2pm"></td>
+          <td>
+            <textarea class="form-control task2" id="task2pm" rows="3"></textarea>
+          </td>
           <td>
             <button type="button" class="btn saveBtn">Save</button>
           </td>
         </tr>
         <tr id="3pmBox">
           <th scope="row">3:00PM</th>
-          <td class="task3pm"></td>
+          <td>
+            <textarea class="form-control task3" id="task3pm" rows="3"></textarea>
+          </td>
           <td>
             <button type="button" class="btn saveBtn">Save</button>
           </td>
         </tr>
         <tr id="4pmBox">
           <th scope="row">4:00PM</th>
-          <td class="task4pm"></td>
+          <td>
+            <textarea class="form-control task4" id="task4pm" rows="3"></textarea>
+          </td>
           <td>
             <button type="button" class="btn saveBtn">Save</button>
           </td>
         </tr>
         <tr id="5pmBox">
           <th scope="row">5:00PM</th>
-          <td class="task5pm"></td>
+          <td>
+            <textarea class="form-control task5" id="task5pm" rows="3"></textarea>
+          </td>
           <td>
             <button type="button" class="btn saveBtn">Save</button>
           </td>
