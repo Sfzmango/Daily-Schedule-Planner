@@ -6,9 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <!-- added custom google fonts style -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css" />
   <title>Work Day Scheduler</title>
 </head>
@@ -17,25 +18,27 @@
   <header class="jumbotron bg-dark text-white ">
     <h1 class="display-3">Work Day Scheduler</h1>
     <p class="lead">A simple calendar app for scheduling your work day</p>
-    <!-- used moment.js to show current day -->
+    <br><br>
+    <!-- used moment.js to show current day and time-->
     <p id="currentDay" class="lead"></p>
     <p id="currentHour" class="lead"></p>
   </header>
-  <div class="container">
 
-    <div class="card text-center" style="width: 18rem;">
-      <div class="card-header h2">
-        Legend:
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item past">This is in the past</li>
-        <li class="list-group-item present">This is in the present hour</li>
-        <li class="list-group-item future">This is in the future</li>
-      </ul>
+  <!-- added a legend to show what each style color meant -->
+  <div class="card text-center">
+    <div class="card-header">
+      <h2>Legend:</h2>
     </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item past">This is in the past</li>
+      <li class="list-group-item present">This is in the present hour</li>
+      <li class="list-group-item future">This is in the future</li>
+    </ul>
+  </div>
 
+  <div class="container">
     <br>
-    <!-- Timeblocks go here -->
+    <!-- used a table to format a scheduler with the left column showing the time, middle showing the required saved task and right showing a save button -->
     <table class="table text-center border border-dark">
       <thead class=" table-dark">
         <tr>
@@ -44,11 +47,11 @@
           <th scope="col">Save:</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody id="tbody">
         <tr id="9amBox">
           <th scope="row">9:00AM</th>
           <td>
-            <textarea class="form-control task9" id="task9am" rows="3"></textarea>
+            <textarea class="form-control" id="task9am" rows="3"></textarea>
           </td>
           <td>
             <button type="button" class="btn saveBtn">Save</button>
@@ -57,7 +60,7 @@
         <tr id="10amBox">
           <th scope="row">10:00AM</th>
           <td>
-            <textarea class="form-control task10" id="task10am" rows="3"></textarea>
+            <textarea class="form-control" id="task10am" rows="3"></textarea>
           </td>
           <td>
             <button type="button" class="btn saveBtn">Save</button>
@@ -66,7 +69,7 @@
         <tr id="11amBox">
           <th scope="row">11:00AM</th>
           <td>
-            <textarea class="form-control task11" id="task11am" rows="3"></textarea>
+            <textarea class="form-control" id="task11am" rows="3"></textarea>
           </td>
           <td>
             <button type="button" class="btn saveBtn">Save</button>
@@ -75,7 +78,7 @@
         <tr id="12pmBox">
           <th scope="row">12:00PM</th>
           <td>
-            <textarea class="form-control task12" id="task12pm" rows="3"></textarea>
+            <textarea class="form-control" id="task12pm" rows="3"></textarea>
           </td>
           <td>
             <button type="button" class="btn saveBtn">Save</button>
@@ -84,7 +87,7 @@
         <tr id="1pmBox">
           <th scope="row">1:00PM</th>
           <td>
-            <textarea class="form-control task1" id="task1pm" rows="3"></textarea>
+            <textarea class="form-control" id="task1pm" rows="3"></textarea>
           </td>
           <td>
             <button type="button" class="btn saveBtn">Save</button>
@@ -93,7 +96,7 @@
         <tr id="2pmBox">
           <th scope="row">2:00PM</th>
           <td>
-            <textarea class="form-control task2" id="task2pm" rows="3"></textarea>
+            <textarea class="form-control" id="task2pm" rows="3"></textarea>
           </td>
           <td>
             <button type="button" class="btn saveBtn">Save</button>
@@ -102,7 +105,7 @@
         <tr id="3pmBox">
           <th scope="row">3:00PM</th>
           <td>
-            <textarea class="form-control task3" id="task3pm" rows="3"></textarea>
+            <textarea class="form-control" id="task3pm" rows="3"></textarea>
           </td>
           <td>
             <button type="button" class="btn saveBtn">Save</button>
@@ -111,7 +114,7 @@
         <tr id="4pmBox">
           <th scope="row">4:00PM</th>
           <td>
-            <textarea class="form-control task4" id="task4pm" rows="3"></textarea>
+            <textarea class="form-control" id="task4pm" rows="3"></textarea>
           </td>
           <td>
             <button type="button" class="btn saveBtn">Save</button>
@@ -120,7 +123,7 @@
         <tr id="5pmBox">
           <th scope="row">5:00PM</th>
           <td>
-            <textarea class="form-control task5" id="task5pm" rows="3"></textarea>
+            <textarea class="form-control" id="task5pm" rows="3"></textarea>
           </td>
           <td>
             <button type="button" class="btn saveBtn">Save</button>
